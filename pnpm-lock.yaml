@@ -7,9 +7,9 @@ importers:
 
   .:
     specifiers:
-      '@angular-devkit/core': 12.2.8
-      '@angular-devkit/schematics': 12.2.8
-      '@angular-devkit/schematics-cli': 12.2.8
+      '@angular-devkit/core': 13.2.2
+      '@angular-devkit/schematics': 13.2.2
+      '@angular-devkit/schematics-cli': 13.2.2
       '@changesets/cli': 2.20.0
       '@commitlint/cli': 16.1.0
       '@commitlint/config-conventional': 16.0.0
@@ -55,9 +55,9 @@ importers:
       typescript: 4.5.5
       url-loader: 4.1.1
     devDependencies:
-      '@angular-devkit/core': 12.2.8
-      '@angular-devkit/schematics': 12.2.8
-      '@angular-devkit/schematics-cli': 12.2.8
+      '@angular-devkit/core': 13.2.2
+      '@angular-devkit/schematics': 13.2.2
+      '@angular-devkit/schematics-cli': 13.2.2
       '@changesets/cli': 2.20.0
       '@commitlint/cli': 16.1.0_@types+node@16.11.22
       '@commitlint/config-conventional': 16.0.0
@@ -117,14 +117,14 @@ importers:
 
   packages/nest-commander-schematics:
     specifiers:
-      '@angular-devkit/core': 12.0.5
-      '@angular-devkit/schematics': 12.0.5
+      '@angular-devkit/core': 13.2.2
+      '@angular-devkit/schematics': 13.2.2
       '@nestjs/schematics': 8.0.3
       rxjs: 7.5.3
       typescript: 4.5.5
     dependencies:
-      '@angular-devkit/core': 12.0.5
-      '@angular-devkit/schematics': 12.0.5
+      '@angular-devkit/core': 13.2.2
+      '@angular-devkit/schematics': 13.2.2
       '@nestjs/schematics': 8.0.3_typescript@4.5.5
       rxjs: 7.5.3
       typescript: 4.5.5
@@ -275,18 +275,6 @@ packages:
       source-map: 0.7.3
     dev: true
 
-  /@angular-devkit/core/12.2.8:
-    resolution: {integrity: sha512-N13N1Lm7qllBXSVZYz4Khw75rnQnS3lu5QiJqlsaNklWgVfVz8jt99AAeGGvNGSLEbmZjlr35YLxu8ugD267Ug==}
-    engines: {node: ^12.14.1 || >=14.0.0, npm: ^6.11.0 || ^7.5.6, yarn: '>= 1.13.0'}
-    dependencies:
-      ajv: 8.6.2
-      ajv-formats: 2.1.0
-      fast-json-stable-stringify: 2.1.0
-      magic-string: 0.25.7
-      rxjs: 6.6.7
-      source-map: 0.7.3
-    dev: true
-
   /@angular-devkit/core/13.1.2_chokidar@3.5.2:
     resolution: {integrity: sha512-uXVesIRiCL/Nv+RSV8JM4j8IoZiGCGnqV2FOJ1hvH7DPxIjhjPMdG/B54xMydZpeASW3ofuxeORyAXxFIBm8Zg==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -305,18 +293,21 @@ packages:
       source-map: 0.7.3
     dev: true
 
-  /@angular-devkit/schematics-cli/12.2.8:
-    resolution: {integrity: sha512-ckcO6Z92+cOgilez+aX6I7sC2QTJQwbMwR+1LoxsO+aFHl+2ZxQ9Wprs5/2VkGFwCxF1/60T3ZveRDzSV09g3A==}
-    engines: {node: ^12.14.1 || >=14.0.0, npm: ^6.11.0 || ^7.5.6, yarn: '>= 1.13.0'}
-    hasBin: true
+  /@angular-devkit/core/13.2.2:
+    resolution: {integrity: sha512-qH0Vu8qwGD5uhmE8PtePA1lm7xL3JtbBCcrQICmLqD6njLDVb2N5pbdDXeiXDlWGUoIRHUhu6Uw4AsY8zXP/FA==}
+    engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+    peerDependencies:
+      chokidar: ^3.5.2
+    peerDependenciesMeta:
+      chokidar:
+        optional: true
     dependencies:
-      '@angular-devkit/core': 12.2.8
-      '@angular-devkit/schematics': 12.2.8
-      ansi-colors: 4.1.1
-      inquirer: 8.1.2
-      minimist: 1.2.5
-      symbol-observable: 4.0.0
-    dev: true
+      ajv: 8.9.0
+      ajv-formats: 2.1.1
+      fast-json-stable-stringify: 2.1.0
+      magic-string: 0.25.7
+      rxjs: 6.6.7
+      source-map: 0.7.3
 
   /@angular-devkit/schematics-cli/13.1.2_chokidar@3.5.2:
     resolution: {integrity: sha512-XSkcVuaaajijQOWE8YerY/8DVuYQWvXxVukweEwkaHSftDQZhfCOZ83nGKbuWkdOdnuDbrc9ve5ZzekplkzVQw==}
@@ -325,6 +316,21 @@ packages:
     dependencies:
       '@angular-devkit/core': 13.1.2_chokidar@3.5.2
       '@angular-devkit/schematics': 13.1.2_chokidar@3.5.2
+      ansi-colors: 4.1.1
+      inquirer: 8.2.0
+      minimist: 1.2.5
+      symbol-observable: 4.0.0
+    transitivePeerDependencies:
+      - chokidar
+    dev: true
+
+  /@angular-devkit/schematics-cli/13.2.2:
+    resolution: {integrity: sha512-Gf5fPh1j5PAhBzkNoQBmPs+7qQbFO/lkdrHDGsBUA0hc3DqsX8fezban5I3RmwxStrQhWWoqO8w/E0c6b3UqBA==}
+    engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+    hasBin: true
+    dependencies:
+      '@angular-devkit/core': 13.2.2
+      '@angular-devkit/schematics': 13.2.2
       ansi-colors: 4.1.1
       inquirer: 8.2.0
       minimist: 1.2.5
@@ -350,15 +356,6 @@ packages:
       rxjs: 6.6.7
     dev: true
 
-  /@angular-devkit/schematics/12.2.8:
-    resolution: {integrity: sha512-SPiMFoCi1TpFXY6h1xGCakgdwT25gGHdbis1MuHE5yMcPLvhl/yr7EQVY1GY00/iMrgeslTHg/UPp4D6xHyQxA==}
-    engines: {node: ^12.14.1 || >=14.0.0, npm: ^6.11.0 || ^7.5.6, yarn: '>= 1.13.0'}
-    dependencies:
-      '@angular-devkit/core': 12.2.8
-      ora: 5.4.1
-      rxjs: 6.6.7
-    dev: true
-
   /@angular-devkit/schematics/13.1.2_chokidar@3.5.2:
     resolution: {integrity: sha512-ayYbHGU8QpMGx8ZyhKOBupz+Zfv/2H1pNQErahYV3qg7hA9hfjTGmNmDQ4iw0fiT04NajjUxuomlKsCsg7oXDw==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -371,6 +368,18 @@ packages:
     transitivePeerDependencies:
       - chokidar
     dev: true
+
+  /@angular-devkit/schematics/13.2.2:
+    resolution: {integrity: sha512-kXPLTkSzRCeBX+SYUkC6MIrWCkH90Y8hVegR9R5n2YqhCJyE+dZlcx4d/8d3VHtZlzAs0LL8BU+liC3wMIagjA==}
+    engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+    dependencies:
+      '@angular-devkit/core': 13.2.2
+      jsonc-parser: 3.0.0
+      magic-string: 0.25.7
+      ora: 5.4.1
+      rxjs: 6.6.7
+    transitivePeerDependencies:
+      - chokidar
 
   /@babel/code-frame/7.16.0:
     resolution: {integrity: sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA==}
@@ -4499,7 +4508,7 @@ packages:
       ajv:
         optional: true
     dependencies:
-      ajv: 8.8.2
+      ajv: 8.9.0
 
   /ajv-formats/2.1.0:
     resolution: {integrity: sha512-USH2jBb+C/hIpwD2iRjp0pe0k+MvzG0mlSn/FIdCgQhUb9ALPRjt2KIQdfZDS9r0ZIeUAg7gOu9KL0PFqGqr5Q==}
@@ -4516,8 +4525,7 @@ packages:
       ajv:
         optional: true
     dependencies:
-      ajv: 8.8.2
-    dev: true
+      ajv: 8.9.0
 
   /ajv-keywords/3.5.2_ajv@6.12.6:
     resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
@@ -4562,8 +4570,8 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /ajv/8.6.2:
-    resolution: {integrity: sha512-9807RlWAgT564wT+DjeyU5OFMPjmzxVobvDFmNAhY+5zD6A2ly3jDp6sgnfyDtlIQ+7H97oc/DGCzzfu9rjw9w==}
+  /ajv/8.8.2:
+    resolution: {integrity: sha512-x9VuX+R/jcFj1DHo/fCp99esgGDWiHENrKxaCENuCxpoMCmAt/COCGVDwA7kleEpEzJjDnvh3yGoOuLu0Dtllw==}
     dependencies:
       fast-deep-equal: 3.1.3
       json-schema-traverse: 1.0.0
@@ -4571,8 +4579,8 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /ajv/8.8.2:
-    resolution: {integrity: sha512-x9VuX+R/jcFj1DHo/fCp99esgGDWiHENrKxaCENuCxpoMCmAt/COCGVDwA7kleEpEzJjDnvh3yGoOuLu0Dtllw==}
+  /ajv/8.9.0:
+    resolution: {integrity: sha512-qOKJyNj/h+OWx7s5DePL6Zu1KeM9jPZhwBqs+7DzP6bGOvqzVCSf0xueYmVuaC/oQ/VtS2zLMLHdQFbkka+XDQ==}
     dependencies:
       fast-deep-equal: 3.1.3
       json-schema-traverse: 1.0.0
@@ -5476,10 +5484,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       restore-cursor: 3.1.0
-
-  /cli-spinners/2.6.0:
-    resolution: {integrity: sha512-t+4/y50K/+4xcCRosKkA7W4gTr1MySvLV0q+PxmG7FJ5g+66ChKurYjxBCjHggHH3HA5Hh9cy+lcUGWDqVH+4Q==}
-    engines: {node: '>=6'}
 
   /cli-spinners/2.6.1:
     resolution: {integrity: sha512-x/5fWmGMnbKQAaNwN+UZlV79qBLM9JFnJuJ03gIi5whrob0xV0ofNVHy9DhwGdsMJQc2OKv0oGmLzvaqvAVv+g==}
@@ -8564,26 +8568,6 @@ packages:
       through: 2.3.8
     dev: true
 
-  /inquirer/8.1.2:
-    resolution: {integrity: sha512-DHLKJwLPNgkfwNmsuEUKSejJFbkv0FMO9SMiQbjI3n5NQuCrSIBqP66ggqyz2a6t2qEolKrMjhQ3+W/xXgUQ+Q==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      ansi-escapes: 4.3.2
-      chalk: 4.1.2
-      cli-cursor: 3.1.0
-      cli-width: 3.0.0
-      external-editor: 3.1.0
-      figures: 3.2.0
-      lodash: 4.17.21
-      mute-stream: 0.0.8
-      ora: 5.4.1
-      run-async: 2.4.1
-      rxjs: 7.5.3
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      through: 2.3.8
-    dev: true
-
   /inquirer/8.2.0:
     resolution: {integrity: sha512-0crLweprevJ02tTuA6ThpoAERAGyVILC4sS74uib58Xf/zSr1/ZWtmm7D5CI+bSQEaA04f0K7idaHpQbSWgiVQ==}
     engines: {node: '>=8.0.0'}
@@ -11215,7 +11199,7 @@ packages:
       bl: 4.1.0
       chalk: 4.1.2
       cli-cursor: 3.1.0
-      cli-spinners: 2.6.0
+      cli-spinners: 2.6.1
       is-interactive: 1.0.0
       is-unicode-supported: 0.1.0
       log-symbols: 4.1.0
